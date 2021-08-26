@@ -1,0 +1,27 @@
+{% extends "por/layout.html" %}
+        {% block body %}
+        <div style="padding:20px;">
+        <h2>Edit this work:</h2>
+        <h3>Enter your work details (You can add another work later).</h3>
+        <form action="{% url 'editWork' work.id %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+           <h3>Title</h3> <input class="form-control" type="text" name="title" value="{{work.title}}" style="width:700px;">
+        </div>
+        <div class="form-group">
+            <h3>Description</h3><textarea class="form-control" name="description" style="width:700px;">{{work.description}}</textarea>
+        </div>
+        <div class="form-group">
+            <h3>Website link *If you don't have one, then leave it blank*</h3><input class="form-control" type="text" name="webLink" value="{{work.webLink}}" style="width:700px;">
+        </div>
+        <div class="form-group">
+            <h3>Image link *If you don't have one, then leave it blank*</h3><input class="form-control" type="text" name="imageLink" value="{{work.imageLink}}" style="width:700px;">
+        </div>
+        <div class="form-group">
+            <h3>Image on hover link *If you don't have one, then leave it blank*</h3><input class="form-control" type="text" name="imageOnHoverLink" value="{{work.imageOnHoverLink}}" style="width:700px;">
+        </div>
+        <input class="btn btn-primary" type="submit" value="Save">
+        </form>
+        </div>
+
+        {% endblock %}

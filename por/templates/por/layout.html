@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Web Developer • Moaz Hassan</title>
+
+		<!-- mobile meta -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" href="{% static 'por/logo.png' %}">
+        <link rel='stylesheet' id='bones-bootstrap-css'  href="{% static 'por/min.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='bones-stylesheet-css'  href="{% static 'por/min1.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='mlestrnge-googlefont-css'  href="{% static 'por/min2.css' %}" type='text/css' media='all' />
+        <style>
+            .imageBox {
+                position:absolute;
+                left:38vw;
+                width:350px;
+                position:absolute;
+            }
+
+            .imageBox .hoverImg {
+              position: absolute;
+              left: 0;
+              top: 0;
+              display: none;
+            }
+
+            .imageBox:hover .hoverImg {
+              display: block;
+            }
+            #whiteGreen {
+              color: white;
+              }
+              #whiteGreen:hover {
+              color: mediumseagreen;
+              }
+
+            #whiteGreen1 {
+              color: white;
+              }
+              #whiteGreen1:hover {
+              color: mediumseagreen;
+              }
+
+            #whiteGreen2 {
+              color: white;
+              }
+              #whiteGreen2:hover {
+              color: mediumseagreen;
+              }
+
+            #whiteGreen3 {
+              color: white;
+              }
+              #whiteGreen3:hover {
+              color: mediumseagreen;
+              }
+
+              #whiteGreen5 {
+              color: white;
+              }
+              #whiteGreen5:hover {
+              color: mediumseagreen;
+              }
+              #whiteGreen6 {
+              color: white;
+              }
+              #whiteGreen6:hover {
+              color: mediumseagreen;
+              }
+
+        </style>
+    </head>
+
+	<body style="background-color:black; background-image: url('{% static 'por/back.gif' %}');" class="page-template page-template-template_portfolio page-template-template_portfolio-php page page-id-7 page-parent cookies-not-set">
+
+        <header class="container" role="banner" style="border-top:1px solid white">
+
+            <div class="row">
+
+                <div class="col-md-12 border-bottom border-left border-right fixed-height">
+
+                    <div class="row">
+
+                        <div class="col-md-2 col-sm-2" id="top">
+
+                            <a class="logo" href="{% url 'index' %}" title="Home"><img class="img-responsive" src="{% static 'por/logo.png' %}" alt="Moaz Hassan"/>
+                            </a>
+                        </div>
+                        <nav class="navbar col-md-offset-4 col-md-8 col-sm-offset-1 col-sm-11 hidden-xs" id="nav" role="navigation">
+                            <ul id="bootstrap-nav" class="nav navbar-nav"><li ><a id="whiteGreen" title="Portfolio" href="{% url 'index' %}">My portfolio</a></li>
+                                <li ><a id="whiteGreen5" title="Your Portfolio" href="{% url 'yourPor' %}">Your Portfolio</a></li>
+                                {% if user.is_authenticated %}
+                                    <li ><a id="whiteGreen1" title="Logout" href="{% url 'logout' %}">Log out</a></li>
+                                {% else %}
+                                    <li ><a id="whiteGreen2" title="Login" href="{% url 'login' %}">Log in</a></li>
+                                    <li  ><a id="whiteGreen3" title="Register" href="{% url 'register' %}">Register</a></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>

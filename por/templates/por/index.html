@@ -1,0 +1,58 @@
+﻿{% extends "por/layout.html" %}
+        {% block body %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center padding-top">
+                    <h1 class="hidden-sm hidden-xs border-bottom" style="color:mediumseagreen;">
+                        Moaz Hassan • Freelance Web Developer & based in Giza, Egypt.<br/>  I created this website as a portfolio for me and a portfolio maker for anyone. <br /> Experienced in developing websites with Django & HTML & CSS & JavaScript.<br /> Also have a good experience with C++ language.                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="text-align:center; color: mediumseagreen;">Auctions website.</h2>
+        <h4 style="color: mediumseagreen; text-align:center;">A website to buy and sell items as auctions.</h4>
+        <br>
+        {% load static %}
+        <a href="https://protected-wildwood-53145.herokuapp.com/"><div class="imageBox">
+          <div class="imageInn">
+            <img style="width:350px; height=350px;" src="{% static 'por/Auctions.PNG' %}" alt="Auctions">
+          </div>
+          <div class="hoverImg">
+            <img style="width:350px; height=350px;" src="{% static 'por/AuctionsOnHover.PNG' %}" alt="Auctions">
+          </div>
+        </div>
+        </a>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <h2 style="text-align:center; color: mediumseagreen;">Network website.</h2>
+        <h4 style="color: mediumseagreen; text-align:center;">A Twitter-like website that you have an account and you can post, like, comment and follow other accounts.</h4>
+        <br>
+
+        <a href="https://network-application.herokuapp.com/"><div class="imageBox">
+          <div class="imageInn">
+            <img style="width:350px; height=350px;" src="{% static 'por/Network.PNG' %}" alt="Auctions">
+          </div>
+          <div class="hoverImg">
+            <img style="width:350px; height=350px;" src="{% static 'por/NetworkOnHover.png' %}" alt="Auctions">
+          </div>
+        </div>
+        </a>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <h2 style="text-align:center; color: mediumseagreen;">C++ project: Logic design simulator.</h2>
+        <h4 style="color: mediumseagreen; text-align:center;">Desktop application with c++ on designing logic circuits with gates and lot of options for the program, with team of 3 members. </h4>
+        <br>
+          <div>
+            <img style="width:500px; height=500px; left:520px; position:absolute;" src="{% static 'por/FULL ADDER SIMULATED1.png' %}" alt="Auctions">
+          </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div style="text-align:center;">
+            <h3 style="color:mediumseagreen">Contact me:</h3>
+            <h3><a href="https://www.reddit.com/user/MoazHassan2022">Reddit</a></h3>
+            <h3 style="color:mediumseagreen">Gmail: Moaz.Bayoumi00@eng-st.cu.edu.eg</h3>    
+            <h3><a href="https://web.facebook.com/moaz.hassan.520">Facebook</a></h3>
+            <h3 style="color:mediumseagreen">Whatsapp or Telegram: +20 1060534698</h3>
+        </div>
+        <br/>
+        <div ><a href="#" class="btn btn-primary" style="position:absolute; left:700px;">Back to Top</a></div>
+
+        {% endblock %}
