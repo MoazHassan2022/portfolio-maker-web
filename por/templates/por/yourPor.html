@@ -25,10 +25,11 @@
         </a>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         {% else %}
+        {% if work.webLink %}
         <h3 style="left:47.5vw; position:absolute;"><a href={{work.webLink}}>Webiste</a></h3>
         <br/><br/><br/>
         {% endif %}
-
+        {% endif %}
         <div ><a href="{% url 'editWork' work.id %}" class="btn btn-primary" style="position:absolute; left:680px; height:40px;">Edit this work</a></div>
         <br/><br/><br/>
         {% endfor %}
