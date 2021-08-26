@@ -12,7 +12,7 @@
         <h3 style="text-align:center; color: mediumseagreen;">{{work.title}}</h3>
         <h5 style="color: mediumseagreen; text-align:center;">{{work.description}}</h5>
         <br>
-
+        {% if work.imageLink %}
         <a href={{work.webLink}}><div class="imageBox">
           <div class="imageInn">
             <img style="width:350px; height=350px;" src={{work.imageLink}} alt="Auctions">
@@ -22,8 +22,13 @@
           </div>
         </div>
         </a>
-
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        {% else %}
+        {% if work.webLink %}
+        <h3 style="left:47.5vw; position:absolute;"><a href={{work.webLink}}>Webiste</a></h3>
+        <br/><br/><br/>
+        {% endif %}
+        {% endif %}
         {% endfor %}
         <div style="text-align:center;">
             <h3 style="color:mediumseagreen">Contact me:</h3>
