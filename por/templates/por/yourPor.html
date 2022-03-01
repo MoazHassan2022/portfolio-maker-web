@@ -1,0 +1,42 @@
+{% extends "por/layout.html" %}
+        {% block body %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center padding-top">
+                    <h1 class="hidden-sm hidden-xs border-bottom" style="color:mediumseagreen;">
+                        {{user.FirstName}} {{user.LastName}} • {{user.description}}</h1>
+                </div>
+            </div>
+        </div>
+        <div style="padding:20px;" ><h3>Your public portfolio link: <a href="{% url 'publicPor' user.username %}">Your Portfolio</a></h3></div>
+        {% for work in workList %}
+        <h3 style="text-align:center; color: mediumseagreen;">{{work.title}}</h3>
+        <h5 style="color: mediumseagreen; text-align:center;">{{work.description}}</h5>
+        <br>
+
+        <a href={{work.webLink}}><div class="imageBox">
+          <div class="imageInn">
+            <img style="width:350px; height=350px;" src={{work.imageLink}} alt="Auctions">
+          </div>
+          <div class="hoverImg">
+            <img style="width:350px; height=350px;" src={{work.imageOnHoverLink}} alt="Auctions">
+          </div>
+        </div>
+        </a>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        {% endfor %}
+        <br/><br/>
+        <div ><a href="{% url 'addWork' %}" class="btn btn-primary" style="position:absolute; left:680px; height:40px;">Add new work</a></div>
+        <br/><br/><br/>
+
+        <div style="text-align:center;">
+            <h3 style="color:mediumseagreen">Contact me:</h3>
+            <h3 style="color:mediumseagreen">Mail: {{user.email}}</h3>    
+            <h3><a href={{user.facebook}}>Facebook</a></h3>
+            <h3 style="color:mediumseagreen">Whatsapp or Telegram: {{user.whats}}</h3>
+        </div>
+        <br/>
+        <div ><a href="#" class="btn btn-primary" style="position:absolute; left:700px; height:40px;">Back to Top</a></div>
+
+        {% endblock %}
